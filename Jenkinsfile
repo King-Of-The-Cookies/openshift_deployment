@@ -18,8 +18,8 @@ node {
 
     printContributedVariables: true,
 
-    regexpFilterText: "$ref/$action/$base_ref",
-    regexpFilterExpression: "master//|test//|pull_request//opened/master|pull_request//opened/test"
+    regexpFilterText: "$ref",
+    regexpFilterExpression: "master|test"
 
    ]
   ])
