@@ -6,14 +6,14 @@ node {
   pipelineTriggers([
    [$class: 'GenericTrigger',
     genericVariables: [
-     [key: 'ref', value: '$.ref', regexpFilter: "/refs/heads/"],
-     [key: 'action', value:'$.action'],
-    [key: 'head_ref', value:'$.head.ref'],
-    [key: 'base_ref', value:'$.base.ref']
+     [key: 'ref', value: '$.ref', regexpFilter: "/refs/heads/", defaultValue: ""],
+     [key: 'action', value:'$.action', defaultValue: ""],
+    [key: 'head_ref', value:'$.head.ref', defaultValue: ""],
+    [key: 'base_ref', value:'$.base.ref', defaultValue: ""]
 
     ],
     genericHeaderVariables: [
-     [key: 'x-github-event']
+     [key: 'x-github-event', defaultValue: ""]
     ],
 
     causeString: 'Triggered on $ref',
