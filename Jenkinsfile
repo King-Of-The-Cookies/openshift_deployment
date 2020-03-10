@@ -18,7 +18,7 @@ node {
 
     printContributedVariables: true,
 
-    regexpFilterText: "$action",
+    regexpFilterText: "$head_ref",
     regexpFilterExpression: "master|test"
 
    ]
