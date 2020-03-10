@@ -1,5 +1,5 @@
 
-def var-1 = " "
+def var = " "
 
 node {
  properties([
