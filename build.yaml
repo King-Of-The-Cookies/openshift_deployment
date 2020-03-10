@@ -1,0 +1,23 @@
+version: v1
+kind: Template
+metadata:
+  name: openshiftapp-template
+  labels:
+    app: openshiftapp
+objects:
+  - version: v1
+    kind: ImageStreamTag
+    metadata:
+      name: openshiftapp
+      labels:
+        app: openshiftapp
+  - version: v1
+    kind: BuildConfig
+    metadata:
+      name: openshiftapp
+      labels:
+        app: openshiftapp
+    spec:
+      source:
+        git:
+          uri:
