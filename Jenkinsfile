@@ -12,18 +12,14 @@ node {
     [key: 'base_ref', value:'$.base.ref', defaultValue: ""]
 
     ],
-    genericHeaderVariables: [
-     [key: 'x-github-event', defaultValue: ""]
-    ],
-
     causeString: 'Triggered on $ref',
 
     token: 'abc123',
 
     printContributedVariables: true,
 
-    regexpFilterText: "$x-github-event/$ref/$action/$base_ref",
-    regexpFilterExpression: "push/master//|push/test//|pull_request//opened/master|pull_request//opened/test"
+    regexpFilterText: "$ref/$action/$base_ref",
+    regexpFilterExpression: "master//|test//|pull_request//opened/master|pull_request//opened/test"
 
    ]
   ])
