@@ -1,3 +1,7 @@
+
+
+node(){
+
 properties([
 [$class: 'GenericTrigger',
 genericHeaderVariables: [
@@ -14,8 +18,6 @@ causeString: 'Triggered by ${X-GitHub-Event}'
 
 
 ]])
-
-node(){
 
     stage("test1"){
     sh "echo ${X-GitHub-Event}"
