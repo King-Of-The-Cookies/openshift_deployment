@@ -6,4 +6,4 @@ node(){
     sh "echo test1"
     }
 
-}
+} 
