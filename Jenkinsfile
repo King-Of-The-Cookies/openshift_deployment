@@ -13,7 +13,7 @@ node {
 
     ],
     genericHeaderVariables: [
-     [key: 'X-GitHub-Event']
+     [key: 'x-github-event']
     ],
 
     causeString: 'Triggered on $ref',
@@ -31,6 +31,6 @@ node {
 
  stage("build") {
 
-  sh "echo Variables from shell:" + X-Github-Event
+  sh "echo Variables from shell:" + x_github_event
  }
 }
