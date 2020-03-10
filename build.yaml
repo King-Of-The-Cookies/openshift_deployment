@@ -1,17 +1,17 @@
-version: v1
+apiVersion: v1
 kind: Template
 metadata:
   name: openshiftapp-template
   labels:
     app: openshiftapp
 objects:
-  - version: v1
-    kind: ImageStreamTag
+  - apiVersion: v1
+    kind: ImageStream
     metadata:
       name: openshiftapp
       labels:
         app: openshiftapp
-  - version: v1
+  - apiVersion: v1
     kind: BuildConfig
     metadata:
       name: openshiftapp
@@ -20,4 +20,12 @@ objects:
     spec:
       source:
         git:
-          uri:
+          uri: https://github.com/King-Of-The-Cookies/openshift_deployment.git
+      output:
+        to:
+          kind: ImageStreamTag
+          name: openshiftapp:1
+      strategy:
+        type: Docker
+        dockerStrategy:
+          noCache: true
