@@ -30,7 +30,7 @@ node {
 
  stage("build") {
   sh '''
-  echo Variables from shell:
+  echo Variables from shell: $ref $X-GitHub-Event
 
   '''
  }
