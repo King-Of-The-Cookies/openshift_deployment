@@ -7,7 +7,7 @@ node {
    [$class: 'GenericTrigger',
     genericVariables: [
      [key: 'ref', value: '$.ref', regexpFilter: "/refs/heads/", defaultValue: "none"],
-     [key: 'action', value:'$.action', defaultValue: "none"],
+     [key: 'actionie', value:'$.action', defaultValue: "none"],
     [key: 'head_ref', value:'$.head.ref', defaultValue: "none"],
     [key: 'base_ref', value:'$.base.ref', defaultValue: "none"]
 
@@ -18,7 +18,7 @@ node {
 
     printContributedVariables: true,
 
-    regexpFilterText: "$head_ref",
+    regexpFilterText: "$actionie",
     regexpFilterExpression: "master|test"
 
    ]
