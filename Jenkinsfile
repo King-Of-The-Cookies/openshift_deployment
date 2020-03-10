@@ -1,5 +1,5 @@
 
-def var = " "
+def var-1 = " "
 
 node {
  properties([
@@ -31,6 +31,6 @@ node {
 
  stage("build") {
 
-  sh "echo Variables from shell:"
+  sh "echo Variables from shell:" + X-Github-Event
  }
 }
