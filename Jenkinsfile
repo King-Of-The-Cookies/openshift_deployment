@@ -22,7 +22,7 @@ node {
 
     printContributedVariables: true,
 
-    regexpFilterText: "$x_github_event/$ref/$action/$base_ref"
+    regexpFilterText: "$x_github_event/$ref/$action/$base_ref",
     regexpFilterExpression: "push/master//|push/test//|pull_request//opened/master|pull_request//opened/test"
 
    ]
