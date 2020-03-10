@@ -1,33 +1,39 @@
 
 
-node(){
-
-properties([
-[$class: 'GenericTrigger',
-genericHeaderVariables: [
-    [key: 'X-GitHub-Event']
-],
-genericVariables: [
-    [key: 'ref', value:'$.ref'],
-
-    [key: 'action', value:'$.action'],
+node {
+ properties([
+  pipelineTriggers([
+   [$class: 'GenericTrigger',
+    genericVariables: [
+     [key: 'ref', value: '$.ref'],
+     [key: 'action', value:'$.action'],
     [key: 'head_ref', value:'$.head.ref'],
-    [key: 'base_ref', value:'$.ref']
-],
-causeString: 'Triggered by ${X-GitHub-Event}'
+    [key: 'base_ref', value:'$.base.ref']
 
+    ],
+    genericHeaderVariables: [
+     [key: 'X-GitHub-Event']
+    ],
 
-]])
+    causeString: 'Triggered on $ref',
 
-    stage("test1"){
-    sh "echo ${X-GitHub-Event}"
-    }
+    token: 'abc123',
 
+    printContributedVariables: true,
+    printPostContent: true,
+
+    silentResponse: false,
+
+    regexpFilterText: '$ref',
+    regexpFilterExpression: 'refs/heads/' + BRANCH_NAME
+   ]
+  ])
+ ])
+
+ stage("build") {
+  sh '''
+  echo Variables from shell:
+
+  '''
+ }
 }
-
-
-
-
-
-
-
