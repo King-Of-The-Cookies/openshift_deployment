@@ -31,6 +31,6 @@ node {
 
  stage("build") {
 
-  sh "echo Variables from shell:" + x_github_event
+  sh "echo Variables from shell:"
  }
 }
