@@ -11,7 +11,7 @@ genericVariables: [
     [key: 'base_ref', value:'$.ref']
 ],
 causeString: 'Triggered by ${X-GitHub-Event}'
-token: 'abc123'
+
 
 ]])
 
