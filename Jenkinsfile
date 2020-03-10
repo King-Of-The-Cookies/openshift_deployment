@@ -6,10 +6,10 @@ node {
   pipelineTriggers([
    [$class: 'GenericTrigger',
     genericVariables: [
-     [key: 'ref', value: '$.ref', regexpFilter: "/refs/heads/", defaultValue: ""],
-     [key: 'action', value:'$.action', defaultValue: ""],
-    [key: 'head_ref', value:'$.head.ref', defaultValue: ""],
-    [key: 'base_ref', value:'$.base.ref', defaultValue: ""]
+     [key: 'ref', value: '$.ref', regexpFilter: "/refs/heads/", defaultValue: "none"],
+     [key: 'action', value:'$.action', defaultValue: "none"],
+    [key: 'head_ref', value:'$.head.ref', defaultValue: "none"],
+    [key: 'base_ref', value:'$.base.ref', defaultValue: "none"]
 
     ],
     causeString: 'Triggered on $ref',
