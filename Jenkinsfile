@@ -5,7 +5,7 @@ node() {
 
 properties([
   parameters([
-  string(defaultValue: 'test', name:'testie')
+  string(defaultValue: 'test', name:'testie'),
   ]),
 
 
@@ -35,7 +35,7 @@ properties([
 
  stage("build") {
 
-  sh "echo Variables from shell ${env.BRANCH_NAME} ${env.testie}"
+  sh "echo Variables from shell ${env.BRANCH_NAME} ${testie}"
  }
 }
 
