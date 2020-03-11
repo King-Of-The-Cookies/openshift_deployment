@@ -1,7 +1,7 @@
 
 def ref = "hi"
 
-node {
+node() {
  properties([
   pipelineTriggers([
    [$class: 'GenericTrigger',
