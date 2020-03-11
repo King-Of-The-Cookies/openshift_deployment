@@ -8,6 +8,7 @@ properties([
    [$class: "GenericTrigger",
     genericVariables: [
      [key: "reference", value: '$.ref', regexpFilter: "refs/heads/"],
+     [key: "action", value: '$.action', regexpFilter: ""],
 
     ],
     genericHeaderVariables: [
@@ -20,7 +21,7 @@ properties([
     printContributedVariables: true,
 
     regexpFilterExpression: "${env.BRANCH_NAME}",
-    regexpFilterText: "${reference}"
+    regexpFilterText: "${reference}${action}"
 
    ]
   ])
