@@ -9,7 +9,7 @@ node() {
      [key: 'ref', value: '$.ref'],
 
     ],
-    causeString: 'Triggered on $ref',
+    causeString: 'Triggered on',
 
     token: 'abc123',
 
