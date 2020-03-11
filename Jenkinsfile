@@ -15,8 +15,7 @@ node() {
 
     printContributedVariables: true,
 
-    regexpFilterText: '$ref',
-    regexpFilterExpression: 'master|test'
+
 
    ]
   ])
