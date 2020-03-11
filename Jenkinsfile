@@ -1,4 +1,4 @@
-import org.yaml.snakeyaml.Yaml
+
 
 def now = new Date()
 def timestamp = now.format("yyyyMMddHHmmssSSS")
@@ -40,6 +40,7 @@ node() {
 
 
     }
+
 
 
  stage("apply build template in ${buildProject}"){
