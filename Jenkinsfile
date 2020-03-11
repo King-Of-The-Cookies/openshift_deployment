@@ -6,7 +6,7 @@ node() {
 properties([
   parameters([
   string(defaultValue: '', name:'reference'),
-  string(defaultValue: '', name:'action'),
+  string(defaultValue: 'none', name:'action'),
   ]),
 
 
@@ -14,7 +14,7 @@ properties([
    [$class: "GenericTrigger",
     genericVariables: [
      [key: "reference", value: '$.ref', regexpFilter: "refs/heads/"],
-     [key: "action", value: '$.action', defaultValue:''],
+     [key: "action", value: '$.action', defaultValue:'none'],
 
     ],
     causeString: "Triggered on",
@@ -33,7 +33,7 @@ properties([
 
  stage("build") {
 
-  sh "echo Variables from shell ${env.BRANCH_NAME} ${reference} "
+  sh "echo Variables from shell ${env.BRANCH_NAME} ${reference} ${action}"
  }
 }
 
