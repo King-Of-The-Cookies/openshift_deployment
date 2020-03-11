@@ -9,8 +9,37 @@ node() {
   sh "echo checking out scm"
 
   checkout scm
+ }
 
-  sh "echo ${timestamp}"
+ stage("test"){
+ sh "echo placeholder for tests"
+ }
+
+ stage("analysis"){
+ sh "echo placeholder for analysis"
+ }
+
+ if ((env.BRANCH_NAME=="master")||(env.BRANCH_NAME=="test")){
+
+ stage("apply build template"){
+
+
+ }
+
+ stage("start build"){
+
+
+ }
+
+ stage("deploy"){
+
+ }
+
+ stage("deployment testing"){
+ sh "echo placeholder for deployment tests"
+
+ }
+
  }
 }
 
