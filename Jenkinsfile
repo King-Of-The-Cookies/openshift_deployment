@@ -15,9 +15,10 @@ node() {
  }
 
  stage("test"){
- sh "echo placeholder for tests"
+ sh "source /var/lib/jenkins/shiningpanda/jobs/9dddd5ce/virtualenvs/d41d8cd9/bin/activate"
+ sh "pip install flask"
+ sh "pip freeze"
 
- sh "docker --version"
 
  }
 
