@@ -35,6 +35,7 @@ node() {
         openshift.withProject(project){
 
         def yaml = readYaml file: "build.yaml"
+        openshift.process(yaml)
 
         }
 
