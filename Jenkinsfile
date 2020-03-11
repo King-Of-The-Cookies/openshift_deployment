@@ -6,7 +6,7 @@ node() {
 
  stage("build") {
 
-  sh "echo Variables from shell: ${env.reference}"
+  sh "echo Variables from shell:"
  }
 }
 
