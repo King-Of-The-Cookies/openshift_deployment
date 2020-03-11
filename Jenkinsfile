@@ -6,7 +6,7 @@ node() {
   pipelineTriggers([
    [$class: 'GenericTrigger',
     genericVariables: [
-     [key: 'ref', value: '$.ref', regexpFilter: "/refs/heads/", defaultValue: "none"],
+     [key: 'ref', value: '$.ref'],
 
     ],
     causeString: 'Triggered on $ref',
@@ -15,8 +15,8 @@ node() {
 
     printContributedVariables: true,
 
-    regexpFilterText: "$ref",
-    regexpFilterExpression: "master|test"
+    regexpFilterText: '$ref',
+    regexpFilterExpression: 'master|test'
 
    ]
   ])
@@ -24,7 +24,7 @@ node() {
 
  stage("build") {
 
-  sh "echo Variables from shell: " + ref
+  sh "echo Variables from shell: ${ref}"
  }
 }
 
