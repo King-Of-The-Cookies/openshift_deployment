@@ -1,43 +1,17 @@
+import java.text.Date
 
-//def ref = "hi"
+def now = new Date()
+def timestamp = now.format("yyyyMMddHHmmss.SSS")
 
 node() {
 
- stage("build") {
+ stage("checkout") {
 
-  sh "echo Variables from shell "
+  sh "echo checking out scm"
+
+  checkout scm
+
+  sh "echo ${timestamp}"
  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
