@@ -6,7 +6,7 @@ node() {
   pipelineTriggers([
    [$class: 'GenericTrigger',
     genericVariables: [
-     [key: 'reference', value: '$.ref'],
+     [key: 'env.reference', value: '$.ref'],
 
     ],
     causeString: 'Triggered on',
