@@ -23,7 +23,7 @@ node() {
 
  stage("build") {
 
-  sh "echo Variables from shell: ${ref}"
+  sh "echo Variables from shell"
  }
 }
 
