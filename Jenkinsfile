@@ -19,7 +19,7 @@ node() {
  sh "echo placeholder for analysis"
  }
 
- if ((env.BRANCH_NAME=="master")||(env.BRANCH_NAME=="test")){
+ if ((env.BRANCH_NAME=="master")||(env.BRANCH_NAME=="develop")){
 
  stage("apply build template"){
 
