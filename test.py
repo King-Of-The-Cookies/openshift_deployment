@@ -14,7 +14,7 @@ class TestProbleem(unittest.TestCase):
 
     def test_probemie(self):
         response = self.app.get("/")
-        self.assertEqual(response.status_code, 500)
+        self.assertEqual(response.status_code, 200)
 
 
 if __name__ == '__main__':
