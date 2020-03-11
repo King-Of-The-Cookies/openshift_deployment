@@ -24,7 +24,7 @@ node() {
 
  if ((env.BRANCH_NAME=="master")||(env.BRANCH_NAME=="test")){
     if (env.BRANCH_NAME=="master"){
-    project = "prod"
+    project = "prod" 
     buildProject = "prod-build"
     } else {
     project = "test"
