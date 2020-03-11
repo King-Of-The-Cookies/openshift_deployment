@@ -32,11 +32,33 @@ node() {
     buildProject = "test-build"
     }
 
+    //single credential needed: gittoken
+
+    withCredentials([
+    string(credentialsId: '6eb06489-11be-4367-b339-eb1027c065d1', variable: 'token')
+    ])
+
     openshift.withCluster("https://192.168.99.100:8443", "NHypC6X6Xab1BkT8eHexaQ3KwjV0Yau57mRZrDbh9u4"){
         openshift.withProject(project){
 
-        def yaml = readYaml file: "build.yaml"
-        openshift.apply(yaml)
+       stage("apply build template in ${buildProject} with ${token}"){
+
+
+     }
+
+     stage("start build"){
+
+
+     }
+
+     stage("deploy"){
+
+     }
+
+     stage("deployment testing"){
+     sh "echo placeholder for deployment tests"
+
+     }
 
         }
 
@@ -45,24 +67,7 @@ node() {
 
 
 
- stage("apply build template in ${buildProject}"){
 
-
- }
-
- stage("start build"){
-
-
- }
-
- stage("deploy"){
-
- }
-
- stage("deployment testing"){
- sh "echo placeholder for deployment tests"
-
- }
 
  }
 }
