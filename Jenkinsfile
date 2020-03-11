@@ -35,7 +35,7 @@ node() {
     //single credential needed: gittoken
 
     withCredentials([
-    string(credentialsId: '	32611c6e-b8f8-4b08-beeb-ef94aca8b00a', variable: 'token')
+    string(credentialsId: '32611c6e-b8f8-4b08-beeb-ef94aca8b00a', variable: 'token')
     ]){
     openshift.withCluster("https://192.168.99.100:8443", "NHypC6X6Xab1BkT8eHexaQ3KwjV0Yau57mRZrDbh9u4"){
         openshift.withProject(project){
@@ -67,11 +67,6 @@ node() {
 
 
     }
-
-
-
-
-
  }
 }
 
