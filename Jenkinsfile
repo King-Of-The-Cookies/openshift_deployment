@@ -29,7 +29,7 @@ properties([
 
  stage("build") {
 
-  sh "echo Variables from shell ${env.BRANCH_NAME}"
+  sh "echo Variables from shell ${env.BRANCH_NAME} ${x_github_event}"
  }
 }
 
