@@ -16,8 +16,8 @@ node() {
 
  stage("test"){
  sh "source /var/lib/jenkins/shiningpanda/jobs/9dddd5ce/virtualenvs/d41d8cd9/bin/activate"
- sh "pip install flask"
- sh "pip freeze"
+ sh "/var/lib/jenkins/shiningpanda/jobs/9dddd5ce/virtualenvs/d41d8cd9/bin/pip install flask"
+
 
 
 
