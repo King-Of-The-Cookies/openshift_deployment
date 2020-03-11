@@ -6,7 +6,7 @@ node() {
 properties([
   parameters([
   string(defaultValue: 'test', name:'testie')
-  ])
+  ]),
 
 
   pipelineTriggers([
