@@ -11,7 +11,7 @@ properties([
 
     ],
     genericHeaderVariables: [
-     [key: 'xgithubevent', regexpFilter: '-|_'],
+     [key: 'X-GitHub-Event', regexpFilter: ''],
     ],
     causeString: "Triggered on",
 
@@ -29,7 +29,7 @@ properties([
 
  stage("build") {
 
-  sh "echo Variables from shell ${env.BRANCH_NAME} ${xgithubevent}"
+  sh "echo Variables from shell ${env.BRANCH_NAME} ${x_github_event}"
  }
 }
 
