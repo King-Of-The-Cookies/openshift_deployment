@@ -33,6 +33,8 @@ node() {
     openshift.withCluster("https://192.168.99.100:8443", "NHypC6X6Xab1BkT8eHexaQ3KwjV0Yau57mRZrDbh9u4"){
         openshift.withProject(project){
 
+        def yaml = readYaml file: "build.yml"
+
         }
 
 
