@@ -16,7 +16,7 @@ properties([
 
     printContributedVariables: true,
 
-    regexpFilterExpression: "master|test|develop",
+    regexpFilterExpression: "${env.BRANCH_NAME}",
     regexpFilterText: '$reference'
 
    ]
