@@ -24,7 +24,7 @@ properties([
 
  stage("build") {
 
-  sh "echo Variables from shell: $reference"
+  sh "echo Variables from shell"
  }
 }
 
