@@ -5,16 +5,16 @@ node() {
 
 properties([
   parameters([
-  string(defaultValue: 'none', name:'reference'),
-  string(defaultValue: 'none', name:'action'),
+  string(defaultValue: '', name:'reference'),
+  string(defaultValue: '', name:'action'),
   ]),
 
 
   pipelineTriggers([
    [$class: "GenericTrigger",
     genericVariables: [
-     [key: "reference", value: '$.ref', regexpFilter: "refs/heads/"],
-     [key: "action", value: '$.action', defaultValue:'none'],
+     [key: "reference", value: '$.ref', regexpFilter: "refs/heads/", defaultValue: ''],
+     [key: "action", value: '$.action', defaultValue:''],
 
     ],
     causeString: "Triggered on",
