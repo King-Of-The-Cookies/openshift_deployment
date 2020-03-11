@@ -10,6 +10,9 @@ properties([
      [key: "reference", value: '$.ref', regexpFilter: "refs/heads/"],
 
     ],
+    genericHeaderVariables: [
+     [key: 'x-github-event'],
+    ],
     causeString: "Triggered on",
 
     token: "abc123",
@@ -26,7 +29,7 @@ properties([
 
  stage("build") {
 
-  sh "echo Variables from shell ${env.BRANCH_NAME}"
+  sh "echo Variables from shell ${env.BRANCH_NAME} $x_github_event"
  }
 }
 
