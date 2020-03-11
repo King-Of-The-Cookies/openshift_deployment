@@ -17,7 +17,7 @@ node() {
  stage("test"){
  sh "echo placeholder for tests"
 
- python "tests/test.py"
+ sh "python -c print('hi')"
 
  }
 
