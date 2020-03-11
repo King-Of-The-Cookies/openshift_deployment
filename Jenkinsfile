@@ -7,7 +7,7 @@ properties([
   pipelineTriggers([
    [$class: "GenericTrigger",
     genericVariables: [
-     [key: "reference", value: '$.ref', regexpFilter: "refs/heads/"],
+     //[key: "reference", value: '$.ref', regexpFilter: "refs/heads/"],
      [key: "action", value: '$.action', regexpFilter: ""],
 
     ],
@@ -21,7 +21,7 @@ properties([
     printContributedVariables: true,
 
     regexpFilterExpression: "${env.BRANCH_NAME}",
-    regexpFilterText: "${reference}${action}"
+    regexpFilterText: "${action}"
 
    ]
   ])
