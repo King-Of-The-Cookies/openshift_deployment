@@ -19,8 +19,8 @@ properties([
 
     printContributedVariables: true,
 
-    regexpFilterExpression: "${env.BRANCH_NAME} $x_github_event",
-    regexpFilterText: '$reference push'
+    regexpFilterExpression: "${env.BRANCH_NAME} push",
+    regexpFilterText: '$reference $x_github_event'
 
    ]
   ])
