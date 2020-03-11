@@ -5,18 +5,18 @@ node() {
 
 properties([
   pipelineTriggers([
-   [$class: 'GenericTrigger',
+   [$class: "GenericTrigger",
     genericVariables: [
-     [key: 'reference', value: '$.ref', regexpFilter: 'refs/heads/'],
+     [key: "reference", value: '$.ref', regexpFilter: "refs/heads/"],
 
     ],
-    causeString: 'Triggered on',
+    causeString: "Triggered on",
 
-    token: 'abc123',
+    token: "abc123",
 
     printContributedVariables: true,
 
-    regexpFilterExpression: 'master|test|develop',
+    regexpFilterExpression: "${env.BRANCH_NAME}",
     regexpFilterText: '$reference'
 
    ]
@@ -26,9 +26,12 @@ properties([
 
  stage("build") {
 
-  sh "echo Variables from shell"
+  sh "echo Variables from shell ${env.BRANCH_NAME}"
  }
 }
+
+
+
 
 
 
