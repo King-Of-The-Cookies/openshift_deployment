@@ -1,5 +1,5 @@
 
-def var = " "
+def ref = "hi"
 
 node {
  properties([
@@ -27,6 +27,6 @@ node {
 
  stage("build") {
 
-  sh "echo Variables from shell:"
+  sh "echo Variables from shell: " + ref
  }
 }
