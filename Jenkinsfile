@@ -16,7 +16,7 @@ properties([
 
     printContributedVariables: true,
 
-    regexpFilterText: 'master|test|develop'
+    regexpFilterText: 'master|test|develop',
     regexpFilterExpression: '$reference'
 
    ]
