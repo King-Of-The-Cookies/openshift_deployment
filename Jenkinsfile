@@ -7,9 +7,6 @@ node() {
    [$class: 'GenericTrigger',
     genericVariables: [
      [key: 'ref', value: '$.ref', regexpFilter: "/refs/heads/", defaultValue: "none"],
-     [key: 'action', value:'$.action', defaultValue: "none"],
-    [key: 'head_ref', value:'$.head.ref', defaultValue: "none"],
-    [key: 'base_ref', value:'$.base.ref', defaultValue: "none"]
 
     ],
     causeString: 'Triggered on $ref',
