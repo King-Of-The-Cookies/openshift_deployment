@@ -7,7 +7,7 @@ def buildProject = null
 
 node() {
 
- stage("checkout") { 
+ stage("checkout") {
 
   sh "echo checking out scm"
 
