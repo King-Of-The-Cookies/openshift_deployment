@@ -1,5 +1,5 @@
 
-def ref = "hi"
+//def ref = "hi"
 
 node() {
  properties([
@@ -30,3 +30,4 @@ node() {
   sh "echo Variables from shell: " + ref
  }
 }
+
