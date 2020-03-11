@@ -11,7 +11,7 @@ properties([
 
     ],
     genericHeaderVariables: [
-     [key: 'x-github-event'],
+     [key: 'x_github_event'],
     ],
     causeString: "Triggered on",
 
