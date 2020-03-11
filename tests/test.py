@@ -1,15 +1,21 @@
 import unittest
+from app import app
 
 class TestProbleem(unittest.TestCase):
 
+
+    def setUp(self) -> None:
+        app.config["TESTING"] = True
+        app.config["DEBUG"] = True
+        self.app = app.test_client()
+
+    def tearDown(self) -> None:
+        pass
+
     def test_probemie(self):
-        h=1
-        self.assertEqual(h,1)
+        response = self.app.get("/")
+        self.assertEqual(response.status_code, 200)
+
 
 if __name__ == '__main__':
-    ############# Add these lines #############
-    import xmlrunner
-    runner = xmlrunner.XMLTestRunner(output='test-reports')
-    unittest.main(testRunner=runner)
-    ###########################################
     unittest.main()
