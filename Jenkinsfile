@@ -1,4 +1,3 @@
-import java.text.Date
 
 def now = new Date()
 def timestamp = now.format("yyyyMMddHHmmss.SSS")
