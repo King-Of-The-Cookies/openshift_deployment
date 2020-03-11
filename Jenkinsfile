@@ -36,8 +36,7 @@ node() {
 
     withCredentials([
     string(credentialsId: '6eb06489-11be-4367-b339-eb1027c065d1', variable: 'token')
-    ])
-
+    ]){
     openshift.withCluster("https://192.168.99.100:8443", "NHypC6X6Xab1BkT8eHexaQ3KwjV0Yau57mRZrDbh9u4"){
         openshift.withProject(project){
 
@@ -59,6 +58,10 @@ node() {
      sh "echo placeholder for deployment tests"
 
      }
+
+
+    }
+
 
         }
 
