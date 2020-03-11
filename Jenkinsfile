@@ -11,7 +11,7 @@ properties([
 
     ],
     genericHeaderVariables: [
-     [key: 'x_github_event', regexpFilter: ''],
+     [key: 'xgithubevent', regexpFilter: '-|_'],
     ],
     causeString: "Triggered on",
 
@@ -19,8 +19,8 @@ properties([
 
     printContributedVariables: true,
 
-    regexpFilterExpression: "${env.BRANCH_NAME} push",
-    regexpFilterText: '$reference $x_github_event'
+    regexpFilterExpression: "${env.BRANCH_NAME}",
+    regexpFilterText: '$reference'
 
    ]
   ])
@@ -29,7 +29,7 @@ properties([
 
  stage("build") {
 
-  sh "echo Variables from shell ${env.BRANCH_NAME} ${x_github_event}"
+  sh "echo Variables from shell ${env.BRANCH_NAME} ${xgithubevent}"
  }
 }
 
