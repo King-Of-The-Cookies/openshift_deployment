@@ -6,7 +6,7 @@ node() {
   pipelineTriggers([
    [$class: 'GenericTrigger',
     genericVariables: [
-     [key: 'ref', value: '$.ref'],
+     [key: 'reference', value: '$.ref'],
 
     ],
     causeString: 'Triggered on',
@@ -23,7 +23,7 @@ node() {
 
  stage("build") {
 
-  sh "echo Variables from shell"
+  sh "echo Variables from shell: $reference"
  }
 }
 
