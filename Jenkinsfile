@@ -5,7 +5,7 @@ node() {
 
 properties([
   parameters([
-  string(defaultValue: '', name:'reference'),
+  string(defaultValue: 'none', name:'reference'),
   string(defaultValue: 'none', name:'action'),
   ]),
 
