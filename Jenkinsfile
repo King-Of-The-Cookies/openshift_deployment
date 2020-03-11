@@ -22,6 +22,7 @@ node() {
  }
 
 
+
  stage("analysis"){
  sh "echo placeholder for analysis"
  }
