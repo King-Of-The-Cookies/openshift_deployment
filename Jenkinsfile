@@ -15,7 +15,7 @@ properties([
 
     printContributedVariables: true,
 
-    regexpText: '$reference'
+    regexpText: '$reference',
     regexpExpression: 'test|master|develop'
 
    ]
