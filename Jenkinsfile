@@ -14,7 +14,7 @@ properties([
    [$class: "GenericTrigger",
     genericVariables: [
      [key: "reference", value: '$.ref', regexpFilter: "refs/heads/"],
-     [key: "action", value: '$.action'],
+     [key: "action", value: '$.action', defaultValue:''],
 
     ],
     causeString: "Triggered on",
@@ -33,7 +33,7 @@ properties([
 
  stage("build") {
 
-  sh "echo Variables from shell ${env.BRANCH_NAME} ${testie} ${action}"
+  sh "echo Variables from shell ${env.BRANCH_NAME} ${reference} "
  }
 }
 
