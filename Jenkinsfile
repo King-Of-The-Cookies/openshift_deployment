@@ -26,7 +26,7 @@ properties([
 
  stage("build") {
 
-  sh "echo Variables from shell"
+  sh "echo Variables from shell" + env.BRANCH_NAME
  }
 }
 
