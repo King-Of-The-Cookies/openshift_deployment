@@ -7,6 +7,7 @@ properties([
    [$class: 'GenericTrigger',
     genericVariables: [
      [key: 'reference', value: '$.ref', regexpFilter:'refs/heads/'],
+     [key: 'actions', value: '$.action'],
 
     ],
     causeString: 'Triggered on',
@@ -15,8 +16,8 @@ properties([
 
     printContributedVariables: true,
 
-    regexpFilterText: '$reference',
-    regexpFilterExpression: 'test|master|develop'
+    regexpFilterText: '$reference $actions',
+    regexpFilterExpression: 'test opened|master opened|develop opened'
 
    ]
   ])
