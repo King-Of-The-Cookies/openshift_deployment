@@ -23,8 +23,8 @@ properties([
 
     printContributedVariables: true,
 
-    regexpFilterExpression: "${env.BRANCH_NAME}",
-    regexpFilterText: "${reference}"
+    //regexpFilterExpression: "${env.BRANCH_NAME}",
+    //regexpFilterText: "${reference}"
 
    ]
   ])
