@@ -17,7 +17,7 @@ node() {
  stage("test"){
  sh "source /var/lib/jenkins/shiningpanda/jobs/9dddd5ce/virtualenvs/d41d8cd9/bin/activate"
  sh "/var/lib/jenkins/shiningpanda/jobs/9dddd5ce/virtualenvs/d41d8cd9/bin/pip install -r requirements.txt"
- sh "/var/lib/jenkins/shiningpanda/jobs/9dddd5ce/virtualenvs/d41d8cd9/bin/python3 tests/test.py"
+ sh "/var/lib/jenkins/shiningpanda/jobs/9dddd5ce/virtualenvs/d41d8cd9/bin/python3 test.py"
 
  }
 
