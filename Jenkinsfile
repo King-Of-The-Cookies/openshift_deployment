@@ -1,6 +1,6 @@
 
 def now = new Date()
-def timestamp = now.format("yyyyMMddHHmmss.SSS")
+def timestamp = now.format("yyyyMMddHHmmssSSS")
 
 node() {
 
