@@ -1,16 +1,14 @@
 
+//def ref = "hi"
 
-node(){
+node() {
 
-    stage("test1"){
-    sh "echo test1"
-    }
 
+ stage("build") {
+
+  sh "echo Variables from shell:"
+ }
 }
-
-
-
-
 
 
 
