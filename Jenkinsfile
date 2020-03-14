@@ -37,11 +37,9 @@ node() {
 
     //single credential needed: gittoken
 
-    withCredentials([
-    string(credentialsId: '32611c6e-b8f8-4b08-beeb-ef94aca8b00a', variable: 'token')
-    ]){
+
     openshift.withCluster(){
-        openshift.withProject(project){
+        openshift.withProject("cicd"){
        stage("backup existing build"){
 
        }
@@ -76,5 +74,3 @@ node() {
 
     }
  }
-}
-
