@@ -4,6 +4,7 @@ def now = new Date()
 def timestamp = now.format("yyyyMMddHHmmssSSS")
 def project = null
 def buildProject = null
+def hoi = true
 
 node() {
 
@@ -25,7 +26,7 @@ node() {
  }
 
 
- if ((env.BRANCH_NAME=="master")||(env.BRANCH_NAME=="test")){
+ if ((env.BRANCH_NAME=="master")||(env.BRANCH_NAME=="test")||(hoi == true){
     if (env.BRANCH_NAME=="master"){
     project = "prod"
     buildProject = "prod-build"
