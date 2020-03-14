@@ -26,7 +26,7 @@ node() {
  }
 
 
- if ((env.BRANCH_NAME=="master")||(env.BRANCH_NAME=="test")||(hoi == true){
+ if ((env.BRANCH_NAME=="master")||(env.BRANCH_NAME=="test")||(hoi == true)){
     if (env.BRANCH_NAME=="master"){
     project = "prod"
     buildProject = "prod-build"
