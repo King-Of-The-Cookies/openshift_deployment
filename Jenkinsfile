@@ -45,7 +45,7 @@ node() {
     openshift.withCluster("https://192.168.99.100:8443", "QJvoqOM-FKHYXl1DXcZbfnpoTC54owvrvvbfAGDNcvs"){
         openshift.withProject(project){
        stage("backup existing build"){
-       
+
        }
 
        stage("apply build template in ${buildProject}"){
