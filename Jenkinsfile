@@ -39,7 +39,7 @@ node() {
 
 
     openshift.withCluster(){
-        openshift.withProject("cicd"){
+        openshift.withProject("test"){
        stage("backup existing build"){
 
        }
