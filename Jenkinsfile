@@ -50,7 +50,7 @@ node() {
 
        stage("apply build template in ${buildProject}"){
 
-        def yaml = readYaml file: build.yaml
+        def yaml = readYaml file: "build.yaml"
         def bc = openshift.process(yaml)
         openshift.apply(bc)
      }
