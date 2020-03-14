@@ -42,7 +42,7 @@ node() {
     withCredentials([
     string(credentialsId: '32611c6e-b8f8-4b08-beeb-ef94aca8b00a', variable: 'token')
     ]){
-    openshift.withCluster("https://192.168.99.100:8443", "QJvoqOM-FKHYXl1DXcZbfnpoTC54owvrvvbfAGDNcvs"){
+    openshift.withCluster("minishift"){
         openshift.withProject(project){
        stage("backup existing build"){
 
